@@ -337,6 +337,8 @@ class SwaggerAutoSchema(ViewInspector):
                     sections[0] = sections[0].strip()
                     if len(sections[0]) < summary_max_len:
                         summary, description = sections
+                elif len(sections[0]) < summary_max_len:
+                    summary, description = sections[0], ''
 
         return description, summary
 
